@@ -4,6 +4,7 @@ public class Apple : MonoBehaviour
 {
    
 
+    public PauseMenu pauseMenu;
     public GameObject collected;
 
     // Start is called before the first frame update
@@ -16,9 +17,9 @@ public class Apple : MonoBehaviour
     {
         if(collider.gameObject.tag == "Player")
         {
-           
+           Destroy(gameObject);
 
-            Destroy(gameObject); 
+           pauseMenu.Win(); 
         }
     }
 }
